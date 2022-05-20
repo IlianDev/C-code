@@ -1,0 +1,150 @@
+Масиви
+
+1. Колекция от ел от един тип
+- разположени последователно в паметта
+- достъп - по позиция 
+
+2. Достъпване
+-индексите - започват от 0;
+short int arrNum[3];
+arrNun[1]
+arrNum[2] = 3; // добавяме
+
+3. Размер
+short int arrNum[3];
+sizeof(arrNum) //-> 6 (защото short int e 6b);
+
+4. Дереференция
+type arrVector[N] // 
+type arrMatrix[n][m] // редове колони
+
+а)Инициализация - 
+char szName[] = "Ivan Ivanov";
+char szJob [16] = {0};
+char szSex [16] = {"w", "o", "m", "a"};
+char szWorkDays [31] = {0};
+int i_arr [] = {1,2,3};
+double d_arr [] = (1.2, 2.3, 3.4);
+
+b) итериране:
+#include<stdio.h>
+int main()
+{
+    int arrNum [ 3 ] = { 1, 2, 3 };
+    for(int i = 0; i < 3; i++){
+        printf("%d",arrNum[i]); // 123
+        printf("%d\n",arrNum[i]); // ...
+    }
+}
+
+в) размер на масива:
+#include<stdio.h>
+int main()
+{
+    short int a[3] = {1,2,3};
+    int len = sizeof(a)/sizeof(a[0]); // 3
+    printf("%d", len);  //3 
+}
+
+
+5. Масиви и указатели
+В езика С името на масива представлява указател към област от паметта, където са записани елементите му. 
+
+6. Четене на масив:
+I WAY
+int arr[SIZE]; // Declare an array of size 10
+int *ptr = arr; // Pointer to first element of integer array
+int i = 0;
+
+printf("Enter %d array elements: ", SIZE);
+while(ptr < &arr[SIZE])
+{
+    // Input in array using pointer
+    scanf("%d", ptr);
+    // Move pointer to next array element
+    ptr++;
+}
+
+II way:
+#include <stdio.h>  
+  
+void  main()  
+{  
+    int arr[10]; 
+    int i;  
+  
+    printf("Input 10 elements in the array :\n");  
+    for(i=0; i<10; i++)  
+    {  
+	    // printf("element - %d : ",i);
+        scanf("%d", &arr[i]);  
+    }  
+  
+    printf("\nElements in array are: ");  
+    for(i=0; i<10; i++)  
+    {  
+        printf("%d  ", arr[i]);  
+    } 
+    // printf("\n");	
+}
+
+-----------------------------------
+#include<stdio.h>
+int main()
+{
+    int a[3] = {1,2,3}; 
+
+    //VALUE
+    printf("2. %d\t\n", a[0]); // 1
+    printf("1. %d\t\n", *a); // 1 -> а е указател към първия елемент от масива
+
+    printf("3. %d\t\n", a[1]); // 2
+    printf("4. %d\t\n", *(a+1)); // 2
+
+    printf("5. %d\t\n", a[2]); // 2
+    printf("6. %d\t\n", *(a+2)); // 2
+
+    // out of range
+    printf("5. %d\t\n", a[3]); // -618660224
+    printf("6. %d\t\n", *(a+3)); // -618660224
+
+
+
+    // ---------------------------------
+    //ADRESS
+    printf("7. 0x%x\t\n", a); // 0x365ffc20 
+    //(16чен вид). Адреса на началото на масива, 
+    // което съвпада със адреса на а[0]
+    printf("8. 0x%x\t\n", &a[0]); // 0x365ffc20
+}
+
+// Aко елемента не е в масива:
+
+#include<stdio.h>
+int main()
+{
+    int arr[5];
+    int * ptr = arr; // указателя присвоява името на масива.
+    // което означава, че към елементите от масива можем да се обръщаме чрез този указател.
+
+    arr[0] = 10; // Stores 10 at 0th element of array
+    ptr[1] = 20; // Stores 20 at 1st element of array
+
+    ptr = arr; // ptr and arr both points to 0th element of array
+
+    *ptr = 100; // Stores 100 at 0th element of array (Since ptr points at arr[0])
+    *arr = 100; // Stores 100 at 0th element of array
+
+    ptr++; // ptr now points at arr[1]
+    ptr--; // ptr now points back at arr[0]
+
+    int * ptr = arr; // Integer pointer pointing at arr[0]
+    *(ptr + 4) = 100; // Assigns 100 to arr[4].
+
+    *(arr + 0) = 10; // Assigns 10 to arr[0]
+}
+
+
+
+
+
