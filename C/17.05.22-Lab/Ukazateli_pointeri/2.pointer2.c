@@ -15,7 +15,7 @@ int main()
     printf(" x = %d\n", x); // 5
     printf("  *ptr = %d\n", *ptr); // 5
 
-    (*ptr) ++;
+    (*ptr) ++; 
     printf(" x = %d\n", x); // 6
     printf("  *ptr = %d\n", *ptr); // 6
 }
