@@ -16,9 +16,6 @@ int main()
    printf("After typecasting, a = %c\n", *t); // After typecasting, a = a
    printf("2.After typecasting, a = %c\n", *(char *)ptr); // After typecasting, a = a
    printf("3.Adress.After typecasting, a = %u\n", (char *)ptr); // a = 4064278787
-
-
-
    return 0;
 }
 // (int *) - превежда се указател към int  
