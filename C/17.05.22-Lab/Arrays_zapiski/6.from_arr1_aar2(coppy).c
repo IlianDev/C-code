@@ -1,3 +1,6 @@
+// 2. Напишете програма, която копира един масив в друг, използвайки
+// указатели.
+
 #include <stdio.h>
 #define SIZE 3 // Maximum array size
 /* from b to a
