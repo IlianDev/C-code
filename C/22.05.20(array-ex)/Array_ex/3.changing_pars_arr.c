@@ -8,9 +8,10 @@ void multi(int arr[], int *i)
     for(k=0;k<3;k++ )
         printf("%d\t",arr[k]);
     int result=0;
-    for( k=1;k<=3;k++){
+    for( k=1;k<=3;k++)
+    {
         result=result + k*arr[k-1];
-}
+    }
     *i=result;
     printf("\n result=%d\n", *i);
 }
