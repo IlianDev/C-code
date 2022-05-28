@@ -22,7 +22,7 @@ int main(){
     {
         ptr_b[i] = ptr_a[i];
     }
-    printf("coppied massiv: \n");
+    printf("coppied array: \n");
     for (i = 0; i < SIZE; i++)
     {
         printf("%d", ptr_a[i]);
