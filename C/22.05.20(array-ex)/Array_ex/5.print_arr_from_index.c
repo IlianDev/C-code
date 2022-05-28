@@ -18,6 +18,7 @@ void cut_array(char x_string[ ])
     int j_index;
     printf("Enter an integer: ");
     scanf("%d", &j_index);
+    
     printf("In res(), x = %s \n", x_string + j_index);
 }
 
