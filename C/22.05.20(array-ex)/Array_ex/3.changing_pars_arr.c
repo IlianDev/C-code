@@ -15,7 +15,8 @@ void multi(int arr[], int *i)
     *i=result;
     printf("\n result=%d\n", *i);
 }
-int main(){
+int main()
+{
     int i=5;
     int *pi=&i;
     int arr[3]={1,2,3};
