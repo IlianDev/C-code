@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int fnPlus(int nA, int nB) { 
+    return(nA + nB); }
 
-int fnPlus(int nA, int nB) { return(nA + nB); }
-int fnMinus(int nA, int nB) { return(nA - nB); }
-int fnMult(int nA, int NB) {return(Na * nB); }
+int fnMinus(int nA, int nB) { 
+    return(nA - nB); }
+
+int fnMult(int nA, int nB) {
+    return(nA * nB); }
+
+int fnDel(int nA, int nB) {
+    return(nA / nB); }
 
 int ( * pfCalc ) ( int, int ) = NULL;
 
@@ -15,13 +22,25 @@ int main(){
     int b=9;
     
     if(op=='+'){
-        pfCalc =fnPlus(a,b);
+        pfCalc = fnPlus(a,b);
+        printf("%d", ( * pfCalc ) );
+    }
+
+    if(op=='-'){
+        pfCalc = fnMinus(a,b);
         printf("%d", ( * pfCalc ) );
     }
     
-    if (op = "*")
+    
+    if (op=="*")
     {
         pfCalc = fnMult(a,b);
         printf("%d", (* pfCalc));
     }   
+
+    if (op=="/")
+    {
+        pfCalc = fnDel(a,b);
+        printf("%d", (* pfCalc));
+    } 
 }
