@@ -9,7 +9,7 @@ int main()
 
     MN_array = (int**) malloc(sizeof(int*)*N);
 
-    //declare
+    //declare memory
     for (int i = 0; i < N; i++)
     {
         MN_array[i] = (int*) malloc(sizeof(int)*M);
