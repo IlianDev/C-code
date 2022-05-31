@@ -40,16 +40,18 @@ void swapRow(int *x, int *y, int n){
     }
 }
 
-// void swapRows2(int **a, int n, int m);
-// for (int i = 0; i < m; i++)
-// {
-//     for (int j = 0; j < count; j++)
-//     {
-//         int temp = a[i][j];
-//         a[i][j] = a[i][j+1];
-//         a[i][j+1] = temp;
-//     }
-// }
+void swapRows_2(int **a, int n, int m)
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            int temp = a[i][j];
+            a[i][j] = a[i][j+1];
+            a[i][j+1] = temp;
+        }
+    }
+}
 
 int main()
 {
@@ -73,9 +75,13 @@ int main()
     printArray(array, M, N);
 
     // swap and print
-    swapRow(array[0], array[1],N);
     printf("Changed\n");
+    swapRow(array[0], array[1],N);
     printArray(array, M, N);
+
+    // printf("Changed_2: ");
+    // swapRows_2(array, M, N);
+    // printArray(array, M, N);
 
     // free memory
     for (int i = 0; i < N; i++)
