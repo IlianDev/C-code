@@ -1,21 +1,40 @@
 #include<stdio.h>
 
-double myfunc(double a, int b)
-{
-    return (a * b);
-}
-double fnPointerDemo()
-{
-    double (*ptrfun) (double, int);
-    ptrfun = myfunc;
-    ptrfun = &myfunc;
-    double dValue = (*ptrfun) (4.5, 1);
-    return dValue;
-}
+int plus (int a, int b);
+int minus (int a, int b);
 
+int pointerFn();
 
 int main()
 {
-    printf("result = %f", fnPointerDemo());
+    pointerFn();
 
+    return 0;
+}
+
+// functions
+int plus(int a, int b)
+{
+    return a + b;
+}
+
+int minus(int a, int b)
+{
+    return a - b;
+}
+
+//pointer
+int pointerFn()
+{
+    //declare
+    int result;
+    int (*ptr) (int, int);
+
+    ptr = plus;
+    result = (*ptr) (4,2);
+    printf("Plus: %d\n", result);
+
+    ptr = minus;
+    result = (*ptr) (4,2);
+    printf("Minus: %d", res);
 }
