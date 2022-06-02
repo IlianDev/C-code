@@ -27,7 +27,8 @@ char string_name[] = "asd123";
  //връща дължината на стринг
 Като се изключи литерала '\0'
 
-- char* strcpy(char *s, char *ct) – копира стринга ct във стринга s, като
+- char* strcpy(char *s, char *ct) – 
+копира стринга ct във стринга s, като
 връща s. 
     char s[] = "asd123";
     char name[] = "abc";
@@ -35,5 +36,35 @@ char string_name[] = "asd123";
     strcpy(s, name); 
     printf("%s", s); // "abc"
 // копира name в s,(презаписва)
+
+- strcat()
+In C programming, the strcat() function contcatenates (joins) two strings.
+As you can see, the strcat() function takes two arguments:
+destination - destination string
+source - source string
+
+    char str1[100] = "This is ", str2[] = "concatenation";
+
+    // concatenate str1 and str2
+    // so the result will be stored in str1
+
+    strcat(str1, str2);
+    puts(str1); // This is concatenation
+    puts(str2); // concatenation
+
+    printf("%s", str1); //This is concatenation
+
+- strchr(s1, c) - 
+намира първото появяване на определен символ в низ.
+returns a pointer to the first occurrence 
+of the character c in the string s1 and returns NULL 
+if the character c is not found in the string s1.
+
+char s1[ ]= "Hello Blogsdope"; 
+  char c = 'B';
+  char *p;
+  p = strchr(s1, c);
+  printf("%s\n", p); // Blogsdope
+  return 0;
 
 
