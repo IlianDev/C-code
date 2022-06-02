@@ -1,0 +1,39 @@
+Characters in C
+1. Дефиниция - string e  масив от символи, завъшващ с '\0'
+
+char[] = "This is an another initialized string!";
+char *u = "This is another string!"
+
+Използват се ""
+
+Нека char *u = "This is another string!";
+Тогава
+u[0] == 'T'
+u[1] == 'h'
+u[2] == 'i'
+…
+u[21] == 'g'
+u[22] == '!'
+u[23] == '\0'
+// Когато u e указател към char, на практика значи, че u сочи масив от символи. 
+
+2. Използва се библиотеката <string.h>
+
+- int strlen(char *s) - връща дължината на стринга 
+char string_name[] = "asd123";
+
+    int length = strlen(string_name);
+    printf("%d", length);
+ //връща дължината на стринг
+Като се изключи литерала '\0'
+
+- char* strcpy(char *s, char *ct) – копира стринга ct във стринга s, като
+връща s. 
+    char s[] = "asd123";
+    char name[] = "abc";
+
+    strcpy(s, name); 
+    printf("%s", s); // "abc"
+// копира name в s,(презаписва)
+
+
