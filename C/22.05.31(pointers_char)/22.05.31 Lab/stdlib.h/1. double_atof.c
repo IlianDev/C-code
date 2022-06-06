@@ -10,7 +10,7 @@ int main () {
    val = atof(str);
    printf("String value = %s, Float value = %f\n", str, val);
 
-   strcpy(str, "tutorialspoint.com");
+   strcpy(str, "Test");
    val = atof(str);
    printf("String value = %s, Float value = %f\n", str, val);
 
