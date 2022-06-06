@@ -10,6 +10,6 @@ int main()
 
     char name1[] = "asen";
     char ime1[] = "angel";
-    int result1 = strcmp(name1, ime1);
+    int result1 = strcmp(name1, ime1); // 1
     printf("%d\n", result1);
 }
