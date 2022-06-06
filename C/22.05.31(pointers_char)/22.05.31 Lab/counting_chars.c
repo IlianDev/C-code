@@ -16,6 +16,6 @@ int main()
         }
     }
     printf("The total characters of the given string= %d",totChar);
-    getch();//display total characters of the string
+    // getch();//display total characters of the string
     return 0;
 }
