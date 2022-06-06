@@ -3,7 +3,7 @@
 
 int main()
 {
-    char str1[100] = "This is ", str2[] = "concatenation";
+    char str1[100] = "This is ", str2[] = "concatenation.";
 
     // concatenate str1 and str2
     // so the result will be stored in str1
