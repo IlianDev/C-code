@@ -23,6 +23,7 @@ int a = 0b0011;
 int b = 0b1101;
 
 printf("%d", bitAt(b , 3));
+return 0;
 }
 
 int bitAt(int number, int index)
