@@ -1,3 +1,5 @@
+// remove the whiteSpaces
+
 #include <string.h>
 void trimleadingandTrailing(char *s)
 {
