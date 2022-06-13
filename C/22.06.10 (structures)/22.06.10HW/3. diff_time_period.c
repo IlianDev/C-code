@@ -45,7 +45,7 @@ int main() {
    // Difference between start and stop time
    differenceBetweenTimePeriod(startTime, stopTime, &diff);
 
-   printf("\nTime Difference: %d %d %d %d %d %d - ", 
+   printf("\nTime Difference: %d: %d: %d: %d: %d: %d - ", 
         &startTime.centuries,
         &startTime.years,
         &startTime.days,
@@ -53,7 +53,7 @@ int main() {
         &startTime.minutes,
         &startTime.seconds);
 
-   printf("%d %d %d %d %d %d ", 
+   printf("%d: %d: %d: %d: %d: %d  ", 
         &stopTime.centuries,
         &stopTime.years,
         &stopTime.days,
@@ -61,7 +61,7 @@ int main() {
         &stopTime.minutes,
         &stopTime.seconds);
 
-   printf("= %d %d %d %d %d %d\n",
+   printf("= %d: %d: %d: %d: %d: %d \n",
         diff.centuries,
         diff.years,
         diff.days, 
