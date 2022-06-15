@@ -5,7 +5,13 @@
 
 #include<stdio.h>
 
+typedef char *ptr;
+
 int main()
 {
-    
+    ptr a;
+    char name[20] = "Test";
+    a = name;
+
+    printf("%s", a); // Test;
 }
