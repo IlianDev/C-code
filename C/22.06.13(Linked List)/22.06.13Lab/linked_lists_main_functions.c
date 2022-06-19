@@ -8,7 +8,7 @@ struct Node {
   int data;
   struct Node* next;
 };
-/////////////////////////////////////////////////////////////////////////////
+
 // Insert at the beginning
 void insertAtBeginning(struct Node** head_ref, int new_data) {
   // Allocate memory to a node
@@ -22,7 +22,7 @@ void insertAtBeginning(struct Node** head_ref, int new_data) {
   // Move head to new node
   (*head_ref) = new_node;
 }
-/////////////////////////////////////////////////////////////////////////////
+
 // Insert a node after a node
 void insertAfter(struct Node* prev_node, int new_data) {
   if (prev_node == NULL) {
