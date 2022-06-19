@@ -56,7 +56,15 @@ void add_at_end(struct node *head, int data){ // data = 67;
     ptr = head;
     temp = (struct node *)malloc(sizeof(struct node)); // creating a new node for 67;
 
-    temp -> data
+    temp -> data = data;    // data = 67;
+    temp -> link = NULL;
+
+    while (ptr -> link != NULL)
+    {
+        ptr = ptr->link;
+    }
+    ptr -> link =temp; // where data is 3 link is NULL so we update the link with the temp;
+    
 }
 
 
