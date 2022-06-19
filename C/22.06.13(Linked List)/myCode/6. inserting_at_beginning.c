@@ -31,6 +31,7 @@ int main()
     int data = 3;
     head = add_beg(head, data);
     ptr = head;
+    
     while(ptr != NULL){
         printf("%d ", ptr ->data); // 3 45 98;
         ptr = ptr ->link;
