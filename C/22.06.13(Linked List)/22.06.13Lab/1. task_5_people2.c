@@ -5,7 +5,7 @@
 
 struct node{
     char name;
-    int phone;
+    int data;
     struct node *next;
 };
 
@@ -29,7 +29,7 @@ int main()
         int temp_phone = 0;
         printf("phone number:");
         scanf("%d", &temp_phone);
-        current->phone = temp_phone;
+        current->data = temp_phone;
 
         printf("Name: ");
         scanf("%s", &current->name);
@@ -41,7 +41,7 @@ int main()
     for (struct node *p=head; p!=NULL; p = p->next)
     {
         if(strcmp(p->name,"Ivan") == 0){
-            printf("Phone number of Ivan is: %s\n", p->phone);
+            printf("Phone number of Ivan is: %s\n", p->data);
         }
     }
     return 0;
