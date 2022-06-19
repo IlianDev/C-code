@@ -83,7 +83,8 @@ void create()
                 printf("nOut of Memory Space:n");
                 exit(0);
         }
-        printf("nEnter the data value for the node:t");
+
+        printf("nEnter the data value for the node:\t");
         scanf("%d",&temp->info);
         temp->next=NULL;
         if(start==NULL)
