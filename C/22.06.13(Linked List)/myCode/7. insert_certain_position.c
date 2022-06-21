@@ -6,8 +6,6 @@ struct node{
     struct node *link; 
 };
 
-void count_of_nodes(struct node *head);
-
 void add_at_pos(struct node *head, int data, int pos);
 
 void print_data(struct node *head);
@@ -38,23 +36,8 @@ int main()
     return 0;
 }
 
-void count_of_nodes(struct node *head){
-    int count = 0;
-    if (head == NULL)
-        printf("Linked list in empty");
-    
-    struct node *ptr = NULL;
-    ptr = head;
-    while (ptr != NULL)
-    {
-        count ++;
-        ptr = ptr->link; // every ittereation will point the next link;
-    }
-    printf("The count of nodes is: %d \n", count);
-}
-
 void add_at_pos(struct node *head, int data, int pos){
-    struct node *ptr = head;
+    struct node *ptr = head; // point to the first node of the linked list
 
     //creating new node 
     struct node *ptr2 = malloc(sizeof(struct node));
@@ -64,10 +47,10 @@ void add_at_pos(struct node *head, int data, int pos){
     pos --; // 3;
     while (pos != 1)
     {
-        ptr = ptr ->link;
+        ptr = ptr ->link; // updating the ptr to the next link 
         pos --;
     }
-    ptr2 -> link = ptr ->link;
+    ptr2 -> link = ptr ->link; 
     ptr -> link = ptr2;
 }
 

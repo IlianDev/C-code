@@ -6,8 +6,6 @@ struct node{
     struct node *link; 
 };
 
-void count_of_nodes(struct node *head);
-
 void add_at_pos(struct node *head, int data, int pos);
 
 void del_at_pos(struct node **head, int possition);
