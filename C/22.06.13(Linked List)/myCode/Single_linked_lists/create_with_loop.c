@@ -1,16 +1,27 @@
 /*
-Each node of the linked list is defined by one structure. The structure name is node, and it can hold one integer value and address of next node.
-Ask the user to enter the size of the linked list. Read and store it in variable length.
-Create three variables to store the address of type node.
-Start one for loop. Inside this loop, we will create each node for the list.
-Create one node and store the address in currentNode.
-Ask the user to enter the element for this node. Read and store it in the value of the node whose address is in currentNode.
-Check if it is the first node in the loop or not. If first, store the same address in temp and headNode also.
-If it is not the first node, set the value of currentNode to the next address of temp. This means, temp is linked to the currentNode.
-After the loop is completed, set the value of next of temp as NULL.
-Set the value of head to temp.
-Now, iterate through the elements of the list using a while loop. If the current node is NULL, exit from the loop.
-Print the value for each node and set the next address to current.
+1 Each node of the linked list is defined by one structure. The structure name is node, and it can hold one integer value and address of next node.
+
+2. Ask the user to enter the size of the linked list. Read and store it in variable length.
+
+3. Create three variables to store the address of type node.
+
+4. Start one for loop. Inside this loop, we will create each node for the list.
+
+5. Create one node and store the address in currentNode.
+
+6. Ask the user to enter the element for this node. Read and store it in the value of the node whose address is in currentNode.
+
+7. Check if it is the first node in the loop or not. If first, store the same address in temp and headNode also.
+
+8. If it is not the first node, set the value of currentNode to the next address of temp. This means, temp is linked to the currentNode.
+
+9. After the loop is completed, set the value of next of temp as NULL.
+
+10. Set the value of head to temp.
+
+11. Now, iterate through the elements of the list using a while loop. If the current node is NULL, exit from the loop.
+
+12. Print the value for each node and set the next address to current.
 
 https://www.codevscolor.com/c-program-create-iterate-linked-list
 */
