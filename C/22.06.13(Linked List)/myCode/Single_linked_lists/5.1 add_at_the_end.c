@@ -1,54 +1,65 @@
-// // TO DO
+#include<stdio.h>
+#include<stdlib.h>
 
-// #include<stdio.h>
-// #include<stdlib.h>
+struct node{
+    int data;
+    struct node *link; 
+};
 
-// struct node{
-//     int data;
-//     struct node *link; 
-// };
-
-// void count_of_nodes(struct node *head);
+void count_of_nodes(struct node *head);
 // void add_at_end(struct node *head, int data);
-// void print_data(struct node *head);
+void print_data(struct node *head);
 
 
-// int main()
-// {
-//     struct node *head = malloc(sizeof(struct node));
-//     head->data = 45;
-//     head ->link = NULL;
+int main()
+{
+    struct node *head = malloc(sizeof(struct node));
+    head->data = 45;
+    head ->link = NULL;
 
-//     struct node *ptr = head;
-//     ptr = add_at_end(ptr, 98);
-//     ptr = add_at_end(ptr, 3);
-//     ptr = add_at_end(ptr, 67);
+    struct node *current = malloc(sizeof(struct node)); 
+    current ->data = 98;
+    current ->link = NULL;
+    head -> link = current;
 
-//     ptr = head;
+    struct node *current2 = malloc(sizeof(struct node));
+    current2 ->data = 3;
+    current2 ->link = NULL;
+    current ->link = current2;
 
-//     while (ptr != NULL) 
-//     {
-//         printf("%d\n", ptr->data);
-//         ptr = ptr->link; // every ittereation will point the next link;
-//     }
+    add_at_end(head, 67);
+
+    count_of_nodes(head);
     
-//     return 0;
-// }
+    print_data(head);
 
-// void count_of_nodes(struct node *head){
-//     int count = 0;
-//     if (head == NULL)
-//         printf("Linked list in empty");
+    return 0;
+}
+
+void count_of_nodes(struct node *head){
+    int count = 0;
+    if (head == NULL)
+        printf("Linked list in empty");
     
-//     struct node *ptr = NULL;
-//     ptr = head;
-//     while (ptr != NULL)
-//     {
-//         count ++;
-//         ptr = ptr->link; // every ittereation will point the next link;
-//     }
-//     printf("The count of nodes is: %d \n", count);
-// }
+    struct node *ptr = NULL;
+    ptr = head;
+    while (ptr != NULL)
+    {
+        count ++;
+        ptr = ptr->link; // every ittereation will point the next link;
+    }
+    printf("The count of nodes is: %d \n", count);
+}
+
+struct node* add_at_ent(struct node *ptr, int data)
+{
+    struct node *temp = malloc(sizeof(struct node));
+    temp->data = data;
+    temp -> link = NULL;
+
+    ptr -> link = temp;
+    return temp;
+}
 
 // void add_at_end(struct node *head, int data){ // data = 67;
 //     struct node *ptr, *temp;
@@ -67,18 +78,20 @@
 // }
 
 
-// void print_data(struct node *head){
-//     if (head == NULL)
-//     {
-//         printf("Linked list in empty");
-//     }
-//     struct node *ptr = NULL;
-//     ptr = head;
-//     printf("The nodes are: "); 
-//     while (ptr != NULL)
-//     {
-//         printf("%d ", ptr->data);
-//         ptr = ptr->link; // every ittereation will point the next link;
-//     }
-// }
+void print_data(struct node *head){
+    if (head == NULL)
+    {
+        printf("Linked list in empty");
+    }
+    struct node *ptr = NULL;
+    ptr = head;
+    printf("The nodes are: "); 
+    while (ptr != NULL)
+    {
+        printf("%d ", ptr->data);
+        ptr = ptr->link; // every ittereation will point the next link;
+    }
+}
+    
+
     

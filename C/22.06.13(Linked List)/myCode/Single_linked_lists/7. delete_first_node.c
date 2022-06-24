@@ -19,7 +19,7 @@ struct node* del_first(struct node *head){
         printf("List is already empty!\n");
     }
     else{
-        struct node *temp = head; // create new pointer temo which point the first pointer head
+        struct node *temp = head; // create new pointer temp which points the first pointer head
         head = head->link; // move over the head pointer to strike the second node
         free(temp); // free the memory for this node
         temp = NULL; // but the temp still contains the adress "1000"

@@ -54,8 +54,8 @@ void count_of_nodes(struct node *head){
 void add_at_end(struct node *head, int data){ // data = 67;
     struct node *ptr, *temp;
     ptr = head;
-    temp = (struct node *)malloc(sizeof(struct node)); // creating a new node for 67;
-
+    
+    temp = (struct node *)malloc(sizeof(struct node)); // creating a new node for 67
     temp -> data = data;    // data = 67;
     temp -> link = NULL;
 
