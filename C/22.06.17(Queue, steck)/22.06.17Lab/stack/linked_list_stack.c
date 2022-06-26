@@ -32,16 +32,16 @@ void push(int data){
 int pop(){
     // 1. create a pointer 
     struct node* temp;
-    // 2. Update the temporary pointer so that it can point the first node
-    temp = top;
-
+    int val;
+   
     if(isEmpty()){
         printf("Stack Underflow.");
         exit(1);
     }
-
+     // 2. Update the temporary pointer so that it can point the first node
+    temp = top;
     // 3. Store value of the first node somewhere
-    int val = temp->data;
+    val = temp->data;
     // 4. update the top pointer to point to the next node
     top = top->link;
     // 5. delete the node;
@@ -49,6 +49,16 @@ int pop(){
     temp = NULL;
     return val;
 }   
+
+int peek()
+{
+    if(isEmpty())
+    {
+        printf("Stack Underflow.");
+        exit(1);
+    }
+    return top -> data;
+}
 
 void print(){
     struct node* temp;
@@ -74,34 +84,36 @@ int main()
     int choice, data;
     while (1)
     {
+        print("\n");
         printf("1. Push\n");
-        printf("2. Print\n");
+        printf("2. Pop\n");
+        printf("3. Print the top element\n");
+        printf("4. Print all the elements of the stack\n");
         printf("3. Quit\n");
         printf("\n");
         printf("Enter your choice: ");
         scanf("%d", &data);
 
-        if (choice == 1)
+        switch (choice)
         {
+        case 1:
             printf("Enter the element to be pushed:");
             scanf("%d", &data);
             push(data);
             break;
-        }
-    
-        else if (choice == 2)
-        {
+        case 2:
+            data = pop();
+            printf("Deleted element is %d", data);
+            break;
+        case 3:
+            printf("The topmost element is: %d\n", peek());
+        case 4:
             print();
             break;
-        }
-        else if(choice == 3)
-        {
+        case 5:
             exit(1);
-        }
-                
-        else{
-             printf("Wrong choice\n");
-            break;
+        default:
+            printf("Wrong choice\n");
         }
     }
     return 0;
