@@ -74,9 +74,10 @@ void print_stack(){
         printf("stack underflow\n");
         return;
     }
+    printf("The elements are:\n");
     for ( i = top; i >= 0; i--)
     {
-        printf("The elements are: %d ", stack_arr[i]);
+        printf(" %d ", stack_arr[i]);
     }
     printf("\n");
 }

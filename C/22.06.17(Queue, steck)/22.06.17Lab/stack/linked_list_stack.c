@@ -101,6 +101,7 @@ int main()
             scanf("%d", &data);
             push(data);
             break;
+            
         case 2:
             data = pop();
             printf("Deleted element is %d", data);
