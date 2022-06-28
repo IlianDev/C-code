@@ -17,7 +17,8 @@ void push(int data){
     struct node* newNode;
     newNode = malloc(sizeof(newNode));
 
-    if (newNode == NULL){
+    if (newNode == NULL)
+    {
         printf("Stack Overflow.");
         exit(1);
     }
@@ -66,10 +67,9 @@ void print(){
 
     if(isEmpty())
     {
-        printf("stack underflow");
+        printf("Stack underflow");
         exit(1);
     }
-
     printf("The stack elements are: ");
     while (temp != NULL)
     {
@@ -84,15 +84,15 @@ int main()
     int choice, data;
     while (1)
     {
-        print("\n");
+        printf("\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Print the top element\n");
         printf("4. Print all the elements of the stack\n");
-        printf("3. Quit\n");
+        printf("5. Quit\n");
         printf("\n");
         printf("Enter your choice: ");
-        scanf("%d", &data);
+        scanf("%d", &choice);
 
         switch (choice)
         {
@@ -100,19 +100,23 @@ int main()
             printf("Enter the element to be pushed:");
             scanf("%d", &data);
             push(data);
-            break;
-            
+            break; 
+        
         case 2:
             data = pop();
             printf("Deleted element is %d", data);
             break;
+
         case 3:
             printf("The topmost element is: %d\n", peek());
+        
         case 4:
             print();
             break;
+        
         case 5:
             exit(1);
+            
         default:
             printf("Wrong choice\n");
         }
