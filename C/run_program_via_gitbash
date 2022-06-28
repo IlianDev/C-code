@@ -1,0 +1,5 @@
+Comands:
+
+1. $ gcc -Wall -Wextra 17.\ task/stack.c 17.\ task/main.c
+2. $ ./a.exe
+
